@@ -99,19 +99,22 @@ services:
        - nginx
 
   apache:
-    image: bitnami/apache:latest
+    #image: bitnami/apache:latest
+    image: php:7.2-apache
     restart: always
     # ports:
       # - 80:80
       # - 443:443
     volumes:
-      - ./apache/html:/app:ro
-      - ./apache/conf/vhosts:/vhosts:ro
-      - ./apache/conf/httpd.conf:/opt/bitnami/apache/conf/httpd.conf
+      #- ./apache/html:/app:ro
+      - ./apache/html:/var/www/html:ro
+      #- ./apache/conf/vhosts:/vhosts:ro
+      - ./apache/apache2:/etc/apache2:ro
+      #- ./apache/conf/httpd.conf:/opt/bitnami/apache/conf/httpd.conf
     environment:
       APACHE_HTTP_PORT_NUMBER: 8080
     networks:
-     # wp_net_frontend:
+     wp_net_frontend:
      wp_net_backend:
       aliases:
        - apache
