@@ -100,7 +100,7 @@ services:
 
   apache:
     #image: bitnami/apache:latest
-    image: grommir/php:7.2-apache-mysql
+    image: grommir/php:7.0-apache-mysql
     restart: always
     # ports:
       # - 80:80
