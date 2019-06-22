@@ -98,6 +98,17 @@ services:
       aliases:
        - nginx
 
+  php:
+    image: php:7.0-fpm
+    restart: always
+    volumes:
+      - ./nginx/html:/var/www/html:ro
+    networks:
+    # wp_net_frontend:
+     wp_net_backend:
+      aliases:
+       - php
+       
   apache:
     #image: bitnami/apache:latest
     image: grommir/php:7.0-apache-mysql
