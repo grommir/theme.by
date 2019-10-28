@@ -99,7 +99,7 @@ services:
        - nginx
 
   php:
-    image: grommir/php:7.0-fpm-mysql
+    image: grommir/php:7.0-fpm-mysql-gd_j
     restart: always
     volumes:
       - ./nginx/html:/var/www/html:rw
