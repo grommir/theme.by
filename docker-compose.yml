@@ -38,7 +38,7 @@ services:
      # wp_net_backend:
       # aliases:
        # - wpcli
-      
+
   pma:
     image: phpmyadmin/phpmyadmin
     restart: always
