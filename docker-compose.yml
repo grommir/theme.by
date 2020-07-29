@@ -136,7 +136,7 @@ services:
         - ./certbot/certs:/etc/letsencrypt:rw
         - ./certbot/webroot:/webroot:rw
     environment: 
-        DOMAINS: "ap1.theme.by ap2.theme.by ap3.theme.by ap4.theme.by ap5.theme.by ng1.theme.by ng2.theme.by ng3.theme.by ng4.theme.by ng5.theme.by belmedtour.by belmedtour.ru belmedtour.com belmedtour.online wprb.by theme.by"
+        DOMAINS: "ap1.theme.by ap2.theme.by ap3.theme.by ap4.theme.by ap5.theme.by ng1.theme.by ng2.theme.by ng3.theme.by ng4.theme.by ng5.theme.by belmedtour.by belmedtour.ru belmedtour.com belmedtour.online wprb.by theme.by www.theme.by"
         EMAIL: "admin@theme.by"
 
 
