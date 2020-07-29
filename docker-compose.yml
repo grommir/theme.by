@@ -38,7 +38,7 @@ services:
      # wp_net_backend:
       # aliases:
        # - wpcli
-
+      
   pma:
     image: phpmyadmin/phpmyadmin
     restart: always
@@ -104,14 +104,13 @@ services:
     volumes:
       - ./nginx/html:/var/www/html:rw
     networks:
-    # wp_net_frontend:
      wp_net_backend:
       aliases:
        - php
        
   apache:
     #image: bitnami/apache:latest
-    image: grommir/php:7.0-apache-mysql
+    image: grommir/php:7.0-fpm-mysql-gd_j
     restart: always
     # ports:
       # - 80:80
@@ -137,7 +136,7 @@ services:
         - ./certbot/certs:/etc/letsencrypt:rw
         - ./certbot/webroot:/webroot:rw
     environment: 
-        DOMAINS: "ap1.theme.by ap2.theme.by ap3.theme.by ap4.theme.by ap5.theme.by ng1.theme.by ng2.theme.by ng3.theme.by ng4.theme.by ng5.theme.by belmedtour.by belmedtour.ru belmedtour.com belmedtour.online"
+        DOMAINS: "ap1.theme.by ap2.theme.by ap3.theme.by ap4.theme.by ap5.theme.by ng1.theme.by ng2.theme.by ng3.theme.by ng4.theme.by ng5.theme.by belmedtour.by belmedtour.ru belmedtour.com belmedtour.online wprb.by theme.by"
         EMAIL: "admin@theme.by"
 
 
